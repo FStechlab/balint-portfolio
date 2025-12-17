@@ -5,6 +5,22 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Globe } from "lucide-react";
 
+// Helper function to get the correct image path with basePath
+// This should match the repositoryName in next.config.mjs
+const getImagePath = (path: string): string => {
+  // In production (GitHub Pages), include the basePath
+  // In development, basePath is empty
+  if (typeof window !== 'undefined') {
+    // Client-side: check if we're on GitHub Pages
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/balint-portfolio' : '';
+    return `${basePath}${path}`;
+  }
+  // Server-side/build time: use production basePath
+  const basePath = process.env.NODE_ENV === 'production' ? '/balint-portfolio' : '';
+  return `${basePath}${path}`;
+};
+
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -98,7 +114,7 @@ export default function Projects() {
                 {/* Project Image */}
                 <div className={`h-48 mb-6 bg-gradient-to-br ${project.gradient} rounded-xl relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
                   <img
-                    src={project.imageUrl ? project.imageUrl : `https://image.thum.io/get/width/800/crop/600/${project.websiteUrl}`}
+                    src={project.imageUrl ? getImagePath(project.imageUrl) : `https://image.thum.io/get/width/800/crop/600/${project.websiteUrl}`}
                     alt={project.title}
                     className="w-full h-full object-cover rounded-xl"
                     loading="lazy"
