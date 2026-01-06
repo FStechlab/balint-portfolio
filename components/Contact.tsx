@@ -27,8 +27,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+36 000 000 000",
-    href: "tel:+36000000000",
+    value: "+36 1 901 1032",
+    href: "tel:+3619011032",
     gradient: "from-green-400 via-emerald-500 to-green-600",
     bgGradient: "from-green-500/20 via-emerald-600/20 to-green-700/20",
     borderColor: "border-green-500/50",
