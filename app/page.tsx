@@ -38,7 +38,7 @@ export default function Home() {
             Bálint Göröcs
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 animate-slide-up">
-            Full-Stack Software Engineer
+            Senior Software Engineer
           </p>
           <p className="text-lg text-gray-400 mb-12 animate-slide-up">
             10+ years of experience building production software
