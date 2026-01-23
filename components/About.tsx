@@ -33,8 +33,8 @@ export default function About() {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <p>
-              I am a <span className="text-blue-400 font-semibold">Senior Software Engineer</span> with{" "}
-              <span className="text-purple-400 font-semibold">10 years</span> of hands-on experience building and
+              I am a <span className="text-blue-400 font-semibold">Lead Developer / Senior Full Stack Engineer</span> with{" "}
+              <span className="text-purple-400 font-semibold">10+ years</span> of hands-on experience building and
               running production software. Much of my career has been spent at IT consulting and software services
               companies, which has given me the opportunity to work across a wide variety of client projects and
               industries, including enterprise systems, SaaS products, fintech platforms, healthcare applications, and
